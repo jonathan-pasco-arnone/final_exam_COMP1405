@@ -11,15 +11,15 @@ def median_word_length(link):
     contents = (file.read()).split()
 
     # Bubble Sorting
-    swaped = True
-    while swaped:
-        swaped = False
+    swapped = True
+    while swapped:
+        swapped = False
         for index in range(1, len(contents) - 1):
             if len(contents[index - 1]) > len(contents[index]):
                 swap_item = contents[index]
                 contents[index] = contents[index - 1]
                 contents[index - 1] = swap_item
-                swaped = True
+                swapped = True
 
     median_length = ((len(contents[int(len(contents) / 2)])
           + len(contents[int(len(contents) / 2 - 0.5)])) / 2)
