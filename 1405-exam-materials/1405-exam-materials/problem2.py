@@ -8,10 +8,14 @@ def count(list1, list2):
     total = 0
 
     for index in range(len(list1)):
+        # If there are not enough elements left for list2 to check
+        if index + len(list2) > len(list1):
+            break
+
         check = False
-        for counter in range(len(list2)):
+        for counter, value in enumerate(list2):
             # If it has failed
-            if list1[index + counter] != list2[counter]:
+            if list1[index + counter] != value:
                 break
             # If at end of list and every character has matched
             if counter == len(list2) - 1:
