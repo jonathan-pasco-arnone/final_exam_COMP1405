@@ -35,7 +35,7 @@ def sort_volumes(filename):
                 volume_order[index] = volume_order[index - 1]
                 volume_order[index - 1] = swap_volume
 
-                # Swap the ID
+                # Swap the IDs
                 swap_id = id_order[index]
                 id_order[index] = id_order[index - 1]
                 id_order[index - 1] = swap_id
