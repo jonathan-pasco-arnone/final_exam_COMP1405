@@ -16,7 +16,7 @@ def most_common_color(filename):
     # The first color is on line 3
     color_counter = 3
     # Record all the frequencies of the colors
-    while color_counter != len(contents) - 3:
+    while color_counter < len(contents):
         current_color = contents[color_counter].strip()
         if colors.get(current_color) is None:
             colors[current_color] = 1
@@ -30,9 +30,9 @@ def most_common_color(filename):
         color_counter += 5
 
     # Check which color has the most occurances
-    for key in colors:
-        if colors[key] > colors[common_color]:
-            common_color = colors[key]
+    for key, value in colors.items():
+        if value > colors[common_color]:
+            common_color = key
     return common_color
 
 def sorted_prices(filename):
