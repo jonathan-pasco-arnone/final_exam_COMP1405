@@ -3,9 +3,11 @@
 # Created by: Jonathan Pasco-Arnone
 # Created on: October 2023
 
+FILE_PATH = "1405-exam-materials/"
+
 def median_word_length(link):
     """ Finds the median length of the words of a file """
-    file = open(link, "r", encoding="utf8")
+    file = open(FILE_PATH + link, "r", encoding="utf8")
     contents = (file.read()).split()
 
     # Bubble Sorting
