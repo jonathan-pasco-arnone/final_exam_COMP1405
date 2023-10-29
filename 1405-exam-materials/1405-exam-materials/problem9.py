@@ -13,14 +13,15 @@ def sort_volumes(filename):
     volume_order = []
     id_order = []
 
-    # The first id is on line 4
+    # The first id is on line 0
     id_counter = 0
     while id_counter != len(contents):
-        # Calculate the volume and holds it with its ID
-        volume = (int(contents[id_counter + 1]) * int(contents[id_counter + 2])
+        # Calculate the volume
+        volume_order.append(int(contents[id_counter + 1]) * int(contents[id_counter + 2])
               * int(contents[id_counter + 3]))
-        volume_order.append(volume)
         id_order.append(int(contents[id_counter]))
+
+        # IDs iterate every 4 lines
         id_counter += 4
 
     # Bubble Sorting
